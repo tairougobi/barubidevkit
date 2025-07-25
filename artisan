@@ -1,0 +1,11 @@
+<?php
+
+require_once __DIR__ . '/bootstrap.php';
+
+use Core\Console\Console;
+
+$app = $GLOBALS['app'];
+$console = new Console($app);
+
+exit($console->run($argv));
+

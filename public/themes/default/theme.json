@@ -1,0 +1,28 @@
+{
+    "name": "Thème par défaut",
+    "version": "1.0.0",
+    "description": "Le thème par défaut du framework",
+    "author": "MonFramework",
+    "screenshot": "screenshot.png",
+    "assets": {
+        "css": [
+            "assets/css/style.css"
+        ],
+        "js": [
+            "assets/js/app.js"
+        ]
+    },
+    "layouts": {
+        "default": "views/layouts/default.php",
+        "admin": "views/layouts/admin.php"
+    },
+    "config": {
+        "colors": {
+            "primary": "#007bff",
+            "secondary": "#6c757d",
+            "success": "#28a745",
+            "danger": "#dc3545"
+        }
+    }
+}
+
