@@ -1,6 +1,6 @@
 {
     "name": "barubitech/barubidevkit",
-    "version": "0.0.2",
+    "version": "0.0.1",
     "description": "Un framework PHP léger façon Laravel et OctoberCMS",
     "type": "project",
     "license": "MIT",
