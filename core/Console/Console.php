@@ -22,6 +22,8 @@ class Console
         $this->register(new Commands\MakeMigrationCommand($this->app));
         $this->register(new Commands\ServeCommand($this->app));
         $this->register(new Commands\LinkThemesCommand($this->app));
+       $this->register(new Commands\InstallCommand($this->app));
+
 
     }
 

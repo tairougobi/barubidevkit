@@ -1,5 +1,6 @@
 {
     "name": "barubitech/barubidevkit",
+    "version": "0.0.1",
     "description": "Un framework PHP léger façon Laravel et OctoberCMS",
     "type": "project",
     "license": "MIT",
@@ -26,6 +27,7 @@
     },
     "scripts": {
         "post-create-project-cmd": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
             "@php artisan install"
         ]
     },
@@ -35,6 +37,7 @@
             "email": "dev@barubitech.com"
         }
     ],
+
     "minimum-stability": "dev",
     "prefer-stable": true
 }

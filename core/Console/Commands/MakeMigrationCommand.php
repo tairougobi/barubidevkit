@@ -39,27 +39,26 @@ class MakeMigrationCommand extends Command
         $className = $this->studlyCase($name);
         
         return "<?php
+        use Core\Database\Migration;
+        use Core\Database\Schema;
 
-use Core\Database\Migration;
-use Core\Database\Schema;
+        class {$className} extends Migration
+        {
+            public function up(): void
+            {
+                \$this->createTable('table_name', function (Schema \$table) {
+                    \$table->id();
+                    \$table->string('name');
+                    \$table->timestamps();
+                });
+            }
 
-class {$className} extends Migration
-{
-    public function up(): void
-    {
-        \$this->createTable('table_name', function (Schema \$table) {
-            \$table->id();
-            \$table->string('name');
-            \$table->timestamps();
-        });
-    }
-
-    public function down(): void
-    {
-        \$this->dropTable('table_name');
-    }
-}
-";
+            public function down(): void
+            {
+                \$this->dropTable('table_name');
+            }
+        }
+        ";
     }
 
     private function studlyCase(string $value): string
